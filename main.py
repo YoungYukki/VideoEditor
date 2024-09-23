@@ -62,6 +62,7 @@ class Editor:
             video_list, '-c', 'copy', 'output.mp4'
         ]
         subprocess.run(args=cmd, shell=True)
+        shutil.rmtree(self.temp_path)
 
 
 if __name__ == '__main__':
